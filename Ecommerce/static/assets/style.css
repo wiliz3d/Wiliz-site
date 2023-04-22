@@ -1,0 +1,15 @@
+body{
+  background: #938989;
+}
+
+
+.image-div{
+  position: absolute;
+  width: 165px;
+  height: 192.5px;
+
+  background: url(domi.jpg);
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
