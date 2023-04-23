@@ -1,11 +1,13 @@
 from django.contrib import admin
 from django.urls import path,include
-from . views import *
+from . import views
 
 app_name = 'main'
 
 urlpatterns = [
-    path('', Home,name='home'),
+    path('', views.Home,name='home'),
+    path('about',views.About,name='abt'),
+    path('signin/',views.Signin,name='signin'),
 ]
 
 

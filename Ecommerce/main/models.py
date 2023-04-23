@@ -41,7 +41,7 @@ class OrderItem(models.Model):
     def __str__(self):
         return self.product.name
         
-    
+            
 class ShippingAddress(models.Model):
     customer = models.ForeignKey(Customer,on_delete=models.SET_NULL,null=True)
     order = models.ForeignKey(Order,on_delete=models.SET_NULL,null=True)
