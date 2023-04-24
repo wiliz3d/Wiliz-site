@@ -1,5 +1,11 @@
 body{
   background: #9c8080;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #content{
@@ -29,4 +35,33 @@ p{
 
 
 
+.login {
+  width: 360px;
+  height: min-content;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgb(212, 210, 210);
+}
+
+.login  h1{
+  font-size: 36px;
+  margin-bottom: 25px;
+
+}
+
+.login form{
+  font-size: 20px;
+
+}
+
+
+.login form .form-group{
+   margin-bottom: 12px;
+
+}
+
+.login form input[type="submit"]{
+  font-size: 20px;
+  margin-top: 15px;
+}
 

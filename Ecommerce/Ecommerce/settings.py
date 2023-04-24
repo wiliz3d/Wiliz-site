@@ -76,11 +76,9 @@ WSGI_APPLICATION = 'Ecommerce.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ecommerce', 
-        'USER': 'ecommerce',
-        'PASSWORD': '1234',
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -128,6 +126,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
+
+ACCOUNT_AUTHENTICATION_METHOD='email'
+ACCOUNT_EMAIL_REQUIRED=True
+ACCOUNT_EMAIL_VERIFICATION='none'
+ACCOUNT_USERNAME_REQUIRED=False
 
 
 # Default primary key field type

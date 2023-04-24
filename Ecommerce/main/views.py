@@ -5,18 +5,8 @@ from django.conf import settings
 import xml.etree.ElementTree as ET
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-
-#/////////////////////////////////////////////////////////////////
-#///                                                           //
-#//  available at https://github.com/wiliz3d/       //
-#//                          
-#//                                                             //
-#//                                                             //
-#//                                                             //
-#//                                                            ///
-#/////////////////////////////////////////////////////////////////
-
-# Create your views here.
+from django.contrib.auth.forms import UserCreationForm
+from .forms import CreateUserForm
 
 
 def Home(request):
@@ -24,13 +14,22 @@ def Home(request):
     context = {'products':products}
     return render(request, ('home.html'),context)
 
-def About(request):
-    return render(request, ('About.html'),{})
-
-
 def Signin(request):
-    return render(request, 'signin.html', {})
+    context = { }
+    return render(request, 'accounts/signin.html',context)
 
 
 def Signup(request):
-    pass
+    form = UserCreationForm()
+    if request.method =='POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()    
+    context = {
+        "form":form
+    }
+    return render(request, 'accounts/signup.html',context)
+
+
+def About(request):
+    return render(request, ('About.html'),{})
