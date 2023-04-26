@@ -6,7 +6,6 @@ import xml.etree.ElementTree as ET
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.forms import UserCreationForm
-from .forms import CreateUserForm
 
 
 def Home(request):
