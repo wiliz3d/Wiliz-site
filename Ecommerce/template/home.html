@@ -14,24 +14,29 @@
     
 </head>
 <body>
-    <div>
+    <div id="header">
       <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <span class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none fs-4">WILIZ3D STORE</span>
-        <ul class="nav nav-pills">
+        <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a href="{% url 'main:home' %}"  class="nav-link active" aria-current="page">Home</a>
+            <a href="{% url 'main:home' %}"  class="btn btn-outline-secondary btn-sm" aria-current="page">Home</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'main:signup' %}" class="nav-link">Signup</a>
+            <a href="{% url 'main:signup' %}" class="btn btn-outline-secondary btn-sm">Signup</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'main:signin' %}"  class="nav-link">Signin</a>
+            <a href="{% url 'main:signin' %}"  class="btn btn-outline-secondary btn-sm">Signin</a>
           </li>
           <h6 class="nav-item">
-            <a href="{% url 'main:abt' %}" class="nav-link">About</a>
+            <a href="{% url 'main:abt' %}" class="btn btn-outline-secondary btn-sm">About</a>
           </h6>
         </ul>
       </header>
+    </div>
+    <div class="container">
+      {% if request.user.is authenticated %}
+      {% else %}
+      {% endif %}
     </div>
 </body>
 </html>

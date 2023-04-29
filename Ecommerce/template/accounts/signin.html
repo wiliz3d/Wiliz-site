@@ -18,9 +18,14 @@
     <div class="login">
       <h1 class="text-center">SIGN IN</h1>
       
-      <form class="needs-validation">
-      
-         <div class="form-group was-validated">
+      <form class="needs-validation" action="." method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">LOGIn</button>
+        
+
+
+<!--         <div class="form-group was-validated">
             <label class="form-label" for="email">Email Address</label>
             <input class="form-control" type="email" id="email">
             <div class="invalid-feedback">
@@ -39,9 +44,11 @@
        <div class="form-group form-check">
         <input class="form-check-input" type="checkbox" id="check">
         <label class="form-check-label" for="check">Remeber me</label>
-       </div>
+       </div> 
      
-         <input class="btn btn-info w-100"  type="submit" value="SIGN IN">
+         <input class="btn btn-info w-100"  type="submit" value="SIGN IN">-->
+
+
       </form>
     </div>
 
