@@ -3,8 +3,14 @@ from . models import *
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .forms import SignupForm,SignInForm
-from django.contrib.auth import authenticate,login
+from .forms import(
+                    SignupForm,
+                    SignInForm
+                  )
+from django.contrib.auth import(
+                                authenticate,
+                                login
+                                )
 
 
 def Home(request):
@@ -27,14 +33,16 @@ def Signup(request):
 
 
 
+
 def Signin(request):
     if request.method == 'POST':
-        form = SignInForm(request.POST):
+        form = SignInForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
             user=authenticate(request,
-                                username=cd["username"],
-                                password=cd['password'])
+                              username=cd["username"],
+                              password=cd['password']
+                              )
             if user is not None:
                 if user.is_active:
                     login(request,user)
@@ -49,6 +57,6 @@ def Signin(request):
 
 
 
-
 def About(request):
     return render(request, ('About.html'),{})
+
