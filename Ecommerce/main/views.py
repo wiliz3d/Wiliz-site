@@ -33,7 +33,6 @@ def Signup(request):
 
 
 
-
 def Signin(request):
     if request.method == 'POST':
         form = SignInForm(request.POST)
