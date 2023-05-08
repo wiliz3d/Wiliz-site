@@ -32,7 +32,6 @@ def Signup(request):
     return render(request, 'accounts/signup.html',context)
 
 
-
 def Signin(request):
     if request.method == 'POST':
         form = SignInForm(request.POST)

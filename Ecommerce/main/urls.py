@@ -6,7 +6,7 @@ app_name = 'main'
 
 urlpatterns = [
     path('', views.Home,name='home'),
-    path('about',views.About,name='abt'),
+    path('about',views.About,name='about'),
     path('signin/',views.Signin,name='signin'),
     path('signup/',views.Signup,name='signup'),
 ]
