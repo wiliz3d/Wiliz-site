@@ -1,58 +1,44 @@
-body{
-  background: #9c8080;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  /* You can customize the colors, fonts, sizes, etc. */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
 
-#header div{
-  position: absolute;
-  width: 722px;
-  height: 75.91px;
-  background: #D3CBCB;
-  position: absolute;
-}
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
 
-#content{
-  position: absolute;
-  width: 722px;
-  height: 75.91px;
-  background: #D3CBCB;
-  position: absolute;
+  header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+  }
 
-}
+  header h1 {
+      display: inline-block;
+      font-size: 32px;
+  }
 
-img{
-  border-radius: 9px;
-  transition: 0.5s ease-in-out;
-}
+  nav {
+      float: right;
+  }
 
-img:hover{
-  transform: scale(1.1);
-  filter: grayscale(100%);
+  nav ul {
+      list-style: none;
+  }
 
-}
+  nav ul li {
+      display: inline-block;
+      margin-left: 20px;
+  }
 
-p{
-  margin: 0;
-  font-size: 16px;
-}
+  nav ul li a {
+      color: white;
+      text-decoration: none;
+  }
 
-.about div{
-  position: absolute;
-  width: 687.26px;
-  height: 279.84px;
-  background: #D9D9D9;
-  border-radius: 9px;
-}
-
-
-
-
-
-
-
-
+  nav ul li a:hover {
+      color: #ccc;
+  }

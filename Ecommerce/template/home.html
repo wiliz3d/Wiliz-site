@@ -1,43 +1,28 @@
+You're welcome. Here is a possible HTML page for your ecommerce website with a header containing home, sign in, sign up and about links:
 
-{% load static %}
-
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-<head><script src="../assets/js/color-modes.js"></script>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'assets/style.css' %}">
-    <link rel="icon" href="{% static 'assets/icons8-add-shopping-cart-48.png' %}" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Home</title>
-    
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecommerce Website</title>
+    <!-- You can add some CSS styles here -->
 </head>
 <body>
-  <div class="container mt-5">
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item">
-            <a href="{% url 'main:home' %}" class="nav-link">Home</a>
-        </li>
-
-        <li class="nav-item">
-            <a href="{% url 'main:about' %}" class="nav-link">About</a>
-        </li>
-
-        <li class="nav-item">
-            <a href="{% url 'main:signin' %}" class="nav-link">SignIn</a>
-        </li>
-
-        <li class="nav-item">
-            <a href="{% url 'main:signup' %}" class="nav-link">Signup</a>
-        </li>
-    </ul>
-
-
-    </div>
-</div>
+    <header>
+        <div class="container">
+            <h1>Ecommerce Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/signin">Sign in</a></li>
+                    <li><a href="/signup">Sign up</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- You can add some content here -->
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+```
