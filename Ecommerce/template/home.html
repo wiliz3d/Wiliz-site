@@ -1,12 +1,13 @@
-You're welcome. Here is a possible HTML page for your ecommerce website with a header containing home, sign in, sign up and about links:
+{% load static %}
 
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Ecommerce Website</title>
     <!-- You can add some CSS styles here -->
+    <link rel="stylesheet" href="{% static 'assets/style.css' %}">
 </head>
 <body>
     <header>
@@ -15,7 +16,7 @@ You're welcome. Here is a possible HTML page for your ecommerce website with a h
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/signin">Sign in</a></li>
+                    <li><a href="/signis">Sign in</a></li>
                     <li><a href="/signup">Sign up</a></li>
                     <li><a href="/about">About</a></li>
                 </ul>
@@ -23,6 +24,14 @@ You're welcome. Here is a possible HTML page for your ecommerce website with a h
         </div>
     </header>
     <!-- You can add some content here -->
+
+   <div>
+        <div>
+            
+        </div>
+   </div>
+
+   
 </body>
 </html>
 ```

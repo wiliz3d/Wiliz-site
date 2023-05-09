@@ -1,44 +1,43 @@
-  /* You can customize the colors, fonts, sizes, etc. */
-  * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-  }
+}
 
-  .container {
+.container {
       max-width: 1200px;
       margin: 0 auto;
   }
 
-  header {
+header {
       background-color: #333;
       color: white;
       padding: 20px;
   }
 
-  header h1 {
+header h1 {
       display: inline-block;
       font-size: 32px;
   }
 
-  nav {
+nav {
       float: right;
   }
 
-  nav ul {
+nav ul {
       list-style: none;
   }
 
-  nav ul li {
+nav ul li {
       display: inline-block;
       margin-left: 20px;
   }
 
-  nav ul li a {
+nav ul li a {
       color: white;
       text-decoration: none;
   }
 
-  nav ul li a:hover {
+nav ul li a:hover {
       color: #ccc;
   }
