@@ -10,29 +10,30 @@ from .models import *
 
 class SignUpView(CreateView):
     form_class = UserCreationForm
-    success_url = reverse_lazy('home')
-    template_name = 'signup.html'
-
+    success_url = reverse_lazy('main:home')
+    template_name = '/Ecommerce/template/accounts/signup.html'
     def dispatch(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
-            return redirect('home')
+            return render(request, 'home.html')
         return super().dispatch(request, *args, **kwargs)
 
 
 def signin(request):
     error = ''
     if request.user.is_authenticated:
-        return redirect('home')
+        return render(request, 'home.html')
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return render(request, 'home.html')
         else:
             error = 'Invalid username or password.'
-    return render(request, 'signin.html', {'error': error})
+            
+    ctx = {'error': error}
+    return render(request, 'signin.html', ctx)
 
 
 @login_required
@@ -43,13 +44,25 @@ def wishlist(request):
         if product_id:
             product = Product.objects.get(id=product_id)
             wishlist.products.add(product)
-            return redirect('wishlist')
+            return render(request, 'home.html')
     products = wishlist.products.all()
     return render(request, 'wishlist.html', {'products': products})
 
 
 def home(request):
     products = Product.objects.all()
-    return render(request, 'home.html', {'products': products})
+    context =  {'products': products}
+    return render(request, 'home.html',context)
 
 
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
